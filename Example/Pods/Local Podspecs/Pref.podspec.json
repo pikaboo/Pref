@@ -1,0 +1,22 @@
+{
+  "name": "Pref",
+  "version": "0.1.0",
+  "summary": "A short description of Pref.",
+  "description": "TODO: Add long description of the pod here.",
+  "homepage": "https://github.com/pikaboo/Pref",
+  "license": {
+    "type": "MIT",
+    "file": "LICENSE"
+  },
+  "authors": {
+    "pikaboo": "lenabru@gmail.com"
+  },
+  "source": {
+    "git": "https://github.com/pikaboo/Pref.git",
+    "tag": "0.1.0"
+  },
+  "platforms": {
+    "ios": "8.0"
+  },
+  "source_files": "Pref/Classes/**/*"
+}

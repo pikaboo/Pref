@@ -1,0 +1,6 @@
+framework module Pref {
+  umbrella header "Pref-umbrella.h"
+
+  export *
+  module * { export * }
+}
