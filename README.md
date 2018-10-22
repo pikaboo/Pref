@@ -30,13 +30,13 @@ Create an object that implements the codable protocol:
 ```swift
 class DummyCodableObject: NSObject, Codable {
 
-var name:String!
-var lastName:String!
+    var name:String!
+    var lastName:String!
 
-enum CodingKeys: String, CodingKey {
-case name
-case lastName = "last_name"
-}
+    enum CodingKeys: String, CodingKey {
+        case name
+        case lastName = "last_name"
+    }
 }
 ```
 
@@ -64,13 +64,13 @@ self.myStoredPref.set(newDummyCodableObject)
 Get notified when the object changes:
 ```swift
 NotificationCenter.default.addObserver(forName: self.myStoredPref.willSetNotificationName, object: nil, queue: OperationQueue.main) { (note) in
-let oldValue = note.userInfo?["previousValue"]
-let newValue = note.userInfo?["newValue"]
-//...
+    let oldValue = note.userInfo?["previousValue"]
+    let newValue = note.userInfo?["newValue"]
+    //...
 }
 NotificationCenter.default.addObserver(forName: self.myStoredPref.didSetNotificationName, object: nil, queue: OperationQueue.main) { (note) in
-let newValue = note.userInfo?["newValue"]
-//...
+    let newValue = note.userInfo?["newValue"]
+    //...
 }
 ```
 
