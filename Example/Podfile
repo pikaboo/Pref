@@ -1,0 +1,11 @@
+use_frameworks!
+
+target 'Pref_Example' do
+  pod 'Pref', :path => '../'
+
+  target 'Pref_Tests' do
+    inherit! :search_paths
+
+    
+  end
+end
