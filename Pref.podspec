@@ -31,6 +31,8 @@ Easily store Pojo Codable objects in UserDefaults, without writing extra code
   s.ios.deployment_target = '8.0'
 
   s.source_files = 'Pref/Classes/**/*'
+  s.swift_version = '4.2'
+
   
   # s.resource_bundles = {
   #   'Pref' => ['Pref/Assets/*.png']
