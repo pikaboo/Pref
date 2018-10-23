@@ -64,4 +64,14 @@ class PrefTests: XCTestCase {
         self.prefUnderTest.set(self.dummyCodableObject)
         self.waitForExpectations(timeout: 5, handler: nil)
     }
+    
+    func testGettingPreviouslyStoredValue(){
+        let dummyCodableObject = DummyCodableObject()
+        dummyCodableObject.name = "Test"
+        let anotherPref =  Pref<DummyCodableObject>(prefs:self.prefs,key:"StamObject")
+        anotherPref.set(dummyCodableObject)
+        let storedValue = self.prefUnderTest.get()
+        XCTAssertNotNil(storedValue)
+        XCTAssertEqual((storedValue?.name)!, dummyCodableObject.name)
+    }
 }
