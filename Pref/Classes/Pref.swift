@@ -49,7 +49,7 @@ public class Pref<T : Codable>: NSObject {
     
     public func get() -> T? {
         guard _underlineValue == nil else {
-            return self._defaultValue
+            return _underlineValue
         }
         let data = self.prefs.data(forKey: self.key)
         
